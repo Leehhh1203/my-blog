@@ -54,7 +54,7 @@ jobs:
       - name: Running profiling
         run: node test/benchmark.js --profiling
       - name: Publish flamegraph to https://${{ github.sha }}-${{ matrix.node-version }}-hexo.surge.sh/flamegraph.html
-        uses: dswistowski/surge-sh-action@2ef23bb28f7240e4922a44df1807022af43782bf #1.1.0
+        uses: dswistowski/surge-sh-action@de5f32b7e182c6e84e35c0172b3683ac81b5439b #1.3.0
         with:
           domain: ${{ github.sha }}-${{ matrix.node-version }}-hexo.surge.sh
           project: ./.tmp-hexo-theme-unit-test/0x/
